@@ -1,0 +1,189 @@
+/* global */
+.larger {
+  font-size: xx-large;
+  font-weight: bolder;
+  line-height: 100px;
+}
+.large {
+  font-size: large;
+  font-weight: 500;
+  line-height: 30px;
+}
+.small {
+  font-size: x-small;
+  line-height: 20px;
+}
+/* ......................................... */
+/* container */
+/* ......................................... */
+.container {
+  display: grid;
+  grid-template-areas: "header" "skillsList" "contactMe" "footer";
+}
+.container > div {
+  background-color: blue;
+  color: white;
+  border: 1px solid red;
+}
+.container > div:not(.topnav) {
+  padding: 80px 0 0 0;
+}
+/* ......................................... */
+/* topnav */
+/* ......................................... */
+.container > .topnav {
+  position: fixed;
+  width: 100%;
+  height: 60px;
+}
+.container > .topnav > .active > img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+}
+.container > .topnav {
+  overflow: hidden;
+  background-color: black;
+  height: 80px;
+}
+.container > .topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.container > .topnav a:not(.active, .icon) {
+  margin-top: 13px;
+}
+.container > .topnav a:hover:not(.active) {
+  background-color: orangered;
+  color: white;
+}
+.container > .topnav a.active {
+  color: white;
+  height: 50px;
+}
+.container > .topnav .icon {
+  display: none;
+  padding: 0;
+}
+.container > .topnav .icon > img {
+  width: 50px;
+  padding: 10px;
+  background-color: black;
+  background-color: orangered;
+}
+/* ......................................... */
+/* aboutMe */
+/* ......................................... */
+.container > .aboutMe {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+  background-color: black;
+}
+.container > .aboutMe > .myTextMessage {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.container > .aboutMe > .myTextMessage > .img > img {
+  width: 300px;
+}
+.container > .aboutMe > .message {
+  text-align: center;
+}
+/* ......................................... */
+/* skillsLearned */
+/* ......................................... */
+.container > .skillsList {
+  background-color: black;
+  color: white;
+  text-align: center;
+  align-items: center;
+}
+.container > .skillsList > .list > div > .large {
+  padding: 0 30% 0 30%;
+  color: red;
+}
+.container > .skillsList>.lable{
+  margin-top: 200px;
+}
+/* ......................................... */
+/* contactme */
+/* ......................................... */
+.container > .contactMe {
+  background-color: black;
+  text-align: center;
+}
+.container > .contactMe>.larger{
+  margin-top: 200px;
+}
+.container > .contactMe > div > form > div {
+  padding: 20px;
+}
+.container > .contactMe > div > form > .Message > textarea {
+  width: 300px;
+  height: 300px;
+}
+.container > .contactMe > div > form > .submit {
+  background-color: blue;
+}
+.container > .contactMe > div > form > .submit:hover {
+  background-color: white;
+  color: black;
+}
+/* ......................................... */
+/* footer */
+/* ......................................... */
+.container > .footer {
+  background-color: black;
+  color: antiquewhite;
+}
+
+@media screen and (max-width: 600px) {
+  /* ......................................... */
+  /* container */
+  /* ......................................... */
+  .container > .topnav a:not(:first-child) {
+    display: none;
+  }
+  .container > .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .container > .topnav.responsive {
+    position: relative;
+  }
+  .container > .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .container > .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  /* ......................................... */
+  /* about me */
+  /* ......................................... */
+  .container > .aboutMe {
+    padding: 30px;
+  }
+  .container > .aboutMe > .myTextMessage > .img > img {
+    width: 150px;
+  }
+
+  /* ......................................... */
+  /* iframe */
+  /* ......................................... */
+  iframe {
+    width: 300px;
+    height: 150px;
+  }
+}
