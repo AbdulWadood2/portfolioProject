@@ -19,7 +19,7 @@ const applicationProgramInterface = {
 
       // send user message to website owner 😀
       const mailOptions = {
-        from: process.env.myEmail,
+        from: subject,
         to: process.env.myEmail, // Replace with the recipient's email address
         subject: `Client :${subject}`,
         text: message,
